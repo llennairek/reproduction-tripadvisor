@@ -203,6 +203,9 @@ h1 span {
   color: #333;
 }
 
+.place a:hover {
+  text-decoration: underline;
+}
 .place > div > span {
   margin: 0 6px;
 }
