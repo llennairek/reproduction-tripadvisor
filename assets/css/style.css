@@ -312,7 +312,8 @@ h1 span {
 }
 
 .whattodo-desc {
-  width: 25%;
+  flex: 1;
+  padding-right: 50px;
 }
 
 .whattodo p {
@@ -334,21 +335,26 @@ h1 span {
 
 .carousel {
   position: relative;
-  width: 75%;
+  width: 848px;
+  height: 275px;
 }
 
 .carousel-wrapper {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 848px;
   display: flex;
   overflow: hidden;
   /* transform: translateX(-100%); */
 }
 
 .carousel-item {
-  width: 32%;
+  width: 272px;
   height: 335px;
   margin-right: 16px;
   flex: 1 0 auto;
+  transition: transform 1s;
 }
 
 .carousel-item img {
@@ -362,6 +368,7 @@ h1 span {
 }
 
 .carousel-item p {
+  margin-top: 5px;
   font-size: 14px;
   color: #333;
 }
