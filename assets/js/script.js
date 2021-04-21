@@ -8,7 +8,6 @@ let left = 0;
 const width = item.offsetWidth;
 const wrapperWidth = wrapper.offsetWidth;
 
-console.log(wrapperWidth);
 const forward = () => {
   const temp = left;
   left -= 2 * (width + 16);
@@ -22,6 +21,7 @@ const forward = () => {
 };
 
 const backward = () => {
+  const temp = left;
   left += 2 * (width + 16);
   if (left > 0) {
     left = temp;
