@@ -24,7 +24,7 @@ const forward = () => {
 const backward = () => {
   left += 2 * (width + 16);
   if (left > 0) {
-    left = 0;
+    left = temp;
     return;
   }
   items.forEach((element) => {
