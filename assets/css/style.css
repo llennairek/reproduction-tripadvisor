@@ -1,3 +1,5 @@
+@import url("./fonts.css");
+
 /*---------------------*/
 /* GENERAL RULES */
 /*---------------------*/
@@ -8,7 +10,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Trip Sans", Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -29,12 +31,12 @@ h2 {
 h3 {
   margin-bottom: 25px;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h4 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 8px;
 }
 
@@ -119,7 +121,7 @@ nav ul {
   color: white;
   padding: 10px 16px;
   border-radius: 20px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -157,7 +159,7 @@ h1 span {
   padding: 18px;
   border-radius: 12px;
   color: black;
-  font-weight: 600;
+  font-weight: 500;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -260,7 +262,7 @@ h1 span {
 .description div:first-child p {
   width: 75%;
   color: #333;
-  font-weight: 100;
+  font-weight: normal;
 }
 
 /* ASIDE CREATE A TRIP*/
@@ -277,6 +279,8 @@ h1 span {
 
 .trip h2 {
   padding: 39px 34px 0 34px;
+  font-size: 32px;
+  font-weight: 500;
 }
 
 .trip .button {
@@ -319,14 +323,14 @@ h1 span {
 .whattodo p {
   margin-bottom: 20px;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: normal;
   color: #333;
 }
 
 .whattodo a {
   color: #333;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .whattodo a:hover {
@@ -376,7 +380,7 @@ h1 span {
 .carousel-item span {
   font-size: 12px;
   color: #333;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 .carousel svg path {
@@ -407,7 +411,7 @@ h1 span {
 
 .award span {
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   /* margin-bottom: 4px; */
 }
 
@@ -539,16 +543,17 @@ h1 span {
   background-color: #faf1ed;
   border-radius: 12px;
   padding: 24px;
+  color: #333;
 }
 
 .forum-item p {
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 30px;
   font-weight: 500;
 }
 
 .forum-item span {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -599,13 +604,13 @@ footer p {
 }
 
 footer a {
-  font-weight: 700;
+  font-weight: 500;
   color: #333;
   border-bottom: 1px solid #333;
-  transition: border 1s;
+  transition: border 0.4s;
   padding: 3px;
 }
 
 footer a:hover {
-  border: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
