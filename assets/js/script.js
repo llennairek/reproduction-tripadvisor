@@ -1,3 +1,7 @@
+/*---------------------*/
+/* CAROUSEL */
+/*---------------------*/
+
 const previous = document.querySelector(".previous");
 const next = document.querySelector(".next");
 const wrapper = document.querySelector(".divert .carousel-wrapper");
@@ -39,4 +43,47 @@ const backward = () => {
 previous.addEventListener("click", backward);
 next.addEventListener("click", forward);
 
-// transform: translateX(calc(-100% - 16px));
+/*---------------------*/
+/* MODAL*/
+/*---------------------*/
+
+const modal = document.querySelector(".modal");
+const button = document.querySelector(".nav-button");
+const close = document.querySelector("#close-modal");
+
+button.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.classList.remove("hidden");
+});
+
+close.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+/*---------------------*/
+/* FORM SUBMIT*/
+/*---------------------*/
+
+const form = document.querySelector("#contact-form");
+const firstName = document.querySelector("#firstname");
+const lastName = document.querySelector("#lastname");
+const email = document.querySelector("#email");
+const subject = document.querySelector("#subject");
+const message = document.querySelector("#message");
+const url = "http://localhost:3000/form-submit";
+
+form.addEventListener("submit", async (e) => {
+  // e.preventDefault();
+  const data = {
+    firstName: firstName.value,
+    lastName: lastName.value,
+    email: email.value,
+    subject: subject.value,
+    message: message.value,
+  };
+  try {
+    const response = await axios.post(url, data);
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+});
