@@ -90,8 +90,8 @@ form.addEventListener("submit", async (e) => {
   }
 
   firstName.value = "";
-  lastName.value = "":
+  lastName.value = "";
   email.value = "";
-  subject.value = "":
-  message.value = "":
+  subject.value = "";
+  message.value = "";
 });
