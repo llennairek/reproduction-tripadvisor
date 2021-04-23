@@ -75,6 +75,7 @@ p {
   justify-content: space-around;
   height: 75%;
   width: 50%;
+  max-width: 700px;
   color: #333;
   background-color: #fff;
   text-align: center;
