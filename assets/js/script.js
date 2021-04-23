@@ -83,6 +83,7 @@ form.addEventListener("submit", async (e) => {
   try {
     const response = await axios.post(url, data);
     modal.classList.add("hidden");
+    alert("Form submitted. Thank you for your message");
     console.log(response);
   } catch (error) {
     console.log(error);
