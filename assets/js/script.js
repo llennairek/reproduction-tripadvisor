@@ -72,7 +72,7 @@ const message = document.querySelector("#message");
 const url = "https://reproduct-tripadvisor-backend.herokuapp.com/form-submit";
 
 form.addEventListener("submit", async (e) => {
-  // e.preventDefault();
+  e.preventDefault();
   const data = {
     firstName: firstName.value,
     lastName: lastName.value,
@@ -82,10 +82,16 @@ form.addEventListener("submit", async (e) => {
   };
   try {
     const response = await axios.post(url, data);
-    // modal.classList.add("hidden");
+    modal.classList.add("hidden");
     alert("Form submitted. Thank you for your message");
     // console.log(response);
   } catch (error) {
     console.log(error);
   }
+
+  firstName.value = "";
+  lastName.value = "":
+  email.value = "";
+  subject.value = "":
+  message.value = "":
 });
