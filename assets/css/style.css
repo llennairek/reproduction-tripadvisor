@@ -52,11 +52,22 @@ p {
 /*---------------------*/
 /* HEADER */
 /*---------------------*/
+header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 20;
+}
+
 nav {
   max-width: 1135px;
   height: 60px;
   display: flex;
   align-items: center;
+}
+
+.hamburger {
+  display: none;
 }
 
 #logo {
@@ -143,7 +154,7 @@ h1 span {
 .activities {
   padding: 16px 0;
   display: flex;
-  position: sticky;
+  /* position: sticky; */
   top: 0px;
   background-color: #fff;
   z-index: 10;
@@ -178,6 +189,10 @@ h1 span {
   overflow: hidden;
 }
 
+.ship {
+  display: none;
+}
+
 /* PHOTOS */
 .photos {
   position: relative;
@@ -187,7 +202,7 @@ h1 span {
 }
 
 .photos > div {
-  height: 430px;
+  height: 372px;
   width: 100%;
 }
 
@@ -251,15 +266,15 @@ h1 span {
   display: flex;
 }
 
-.description div:first-child {
+.description > div:first-child {
   flex: 1.5;
 }
 
-.description div:last-child {
+.description > div:last-child {
   flex: 1;
 }
 
-.description div:first-child p {
+.description > div:first-child p {
   width: 75%;
   color: #333;
   font-weight: normal;
@@ -277,6 +292,18 @@ h1 span {
   max-height: 460px;
 }
 
+.trip > div:first-child {
+  padding-bottom: 50px;
+}
+
+.trip > div:nth-child(2) {
+  height: 188px;
+  background-image: url("../images/image_trips_card_medium.png");
+  background-repeat: no-repeat;
+  background-position: -2px;
+  background-size: 110%;
+}
+
 .trip h2 {
   padding: 39px 34px 0 34px;
   font-size: 32px;
@@ -291,18 +318,9 @@ h1 span {
 }
 
 .trip p {
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: 25px;
   padding: 0 34px;
-}
-
-.trip img {
-  position: relative;
-  left: -5px;
-  width: 110%;
-  height: 40%;
-  margin: 0;
-  object-fit: cover;
 }
 
 /* UNMISSABLE */
@@ -613,4 +631,214 @@ footer a {
 
 footer a:hover {
   border-bottom: 1px solid transparent;
+}
+
+@media (max-width: 1184px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .activities {
+    flex-wrap: wrap;
+    padding: 8px 0 0 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .immanquables {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .activity {
+    min-width: 22%;
+    flex-shrink: 0;
+    margin-bottom: 16px;
+    height: 70px;
+    padding: 10px;
+  }
+
+  .activity:nth-child(4) {
+    margin-right: 0;
+  }
+  .ship {
+    display: flex;
+  }
+}
+
+@media (max-width: 1024px) {
+  .photos > div {
+    height: 276px;
+  }
+
+  .description {
+    flex-direction: column;
+  }
+
+  .description > div > p {
+    width: 100% !important;
+  }
+
+  .trip {
+    margin-top: 50px;
+    height: 250px;
+    flex-direction: row;
+  }
+
+  .trip > div {
+    width: 50%;
+    height: 100%;
+  }
+
+  .trip > div:nth-child(2) {
+    background-size: 130%;
+    height: 100%;
+  }
+
+  .link span {
+    display: none;
+  }
+
+  #logo img {
+    width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-wrapper input {
+    display: none;
+  }
+
+  #logo img {
+    margin-right: 0;
+  }
+
+  .trip {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .trip > div:nth-child(2) {
+    height: 188px;
+    width: 100%;
+    background-size: 110%;
+  }
+
+  .photos > div:last-child {
+    display: none;
+  }
+
+  .link {
+    display: none;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .search-wrapper > div {
+    border: none;
+
+    font-size: 20px;
+  }
+
+  .search-wrapper {
+    width: 60px;
+    flex: 1;
+  }
+
+  .search-wrapper > div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+  }
+
+  .hamburger {
+    display: block;
+    flex: 1;
+    font-size: 22px;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  h3 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .trip > div {
+    width: 100%;
+  }
+
+  .trip p {
+    margin-bottom: 35px;
+    width: 90%;
+  }
+
+  .whattodo {
+    flex-direction: column;
+  }
+
+  .whattodo-desc {
+    padding-right: 0;
+    margin-bottom: 16px;
+  }
+  .travel-guides {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+  }
+  .travel-guides > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 848px;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .guide {
+    width: 75%;
+  }
+
+  .forums {
+    position: relative;
+    margin-bottom: 250px;
+  }
+
+  .forum-wrapper {
+    position: absolute;
+  }
+
+  .forum-item {
+    width: 270px;
+    margin-right: 16px;
+  }
 }
