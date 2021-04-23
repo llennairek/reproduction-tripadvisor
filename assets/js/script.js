@@ -69,7 +69,7 @@ const lastName = document.querySelector("#lastname");
 const email = document.querySelector("#email");
 const subject = document.querySelector("#subject");
 const message = document.querySelector("#message");
-const url = "http://localhost:3000/form-submit";
+const url = "https://reproduct-tripadvisor-backend.herokuapp.com/form-submit";
 
 form.addEventListener("submit", async (e) => {
   // e.preventDefault();
