@@ -137,6 +137,10 @@ p {
   cursor: pointer;
 }
 
+.modal button[type="submit"]:hover {
+  color: #ff5d5d;
+}
+
 .modal button[type="submit"] i {
   position: absolute;
   left: 10px;
